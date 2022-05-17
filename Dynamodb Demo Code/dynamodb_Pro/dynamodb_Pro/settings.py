@@ -80,8 +80,7 @@ DATABASES = {
        }
    }
 
-DYNAMODB_SESSIONS_AWS_ACCESS_KEY_ID = 'YourKeyIDHere'
-DYNAMODB_SESSIONS_AWS_SECRET_ACCESS_KEY = 'YourSecretHere'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
