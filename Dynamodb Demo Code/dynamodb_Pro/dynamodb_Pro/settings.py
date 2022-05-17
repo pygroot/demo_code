@@ -74,12 +74,14 @@ WSGI_APPLICATION = 'dynamodb_Pro.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+       'default': {
+           'ENGINE': 'djnamodb',
+           'NAME': 'demodb',
+       }
+   }
 
+DYNAMODB_SESSIONS_AWS_ACCESS_KEY_ID = 'YourKeyIDHere'
+DYNAMODB_SESSIONS_AWS_SECRET_ACCESS_KEY = 'YourSecretHere'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -121,3 +123,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SESSION_ENGINE = 'dynamodb_sessions.backends.cached_dynamodb'
